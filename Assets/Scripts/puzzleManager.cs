@@ -23,6 +23,7 @@ public class puzzleManager : MonoBehaviour
     private bool mensajeMostrado = false;
     private void Start()
     {
+        
         // Asegúrate de que las referencias estén asignadas antes de iniciar el juego
         if (objetoATransform == null || jugadorTransform == null || canvasMinijuego == null)
         {
@@ -45,6 +46,8 @@ public class puzzleManager : MonoBehaviour
         // Verifica si las posiciones del objeto A y del jugador están lo suficientemente cerca
         if (!minijuegoActivo && Vector3.Distance(objetoATransform.position, jugadorTransform.position) < 1.0f)
         {
+            Debug.LogError("Abriendo puzzle.");
+
             // Activa el Canvas cuando las posiciones están lo suficientemente cerca
             ActivarMinijuego();
         }

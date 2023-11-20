@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactionDistance: 1
   notaCanvas: {fileID: 0}
+  agarrar: {fileID: 8300000, guid: 7158c533b9e3fd7498277c35cc3bf33d, type: 3}
 --- !u!61 &8100228147626536033
 BoxCollider2D:
   m_ObjectHideFlags: 0

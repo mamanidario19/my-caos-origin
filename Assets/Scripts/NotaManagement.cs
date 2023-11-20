@@ -9,6 +9,7 @@ public class NotaManagement : MonoBehaviour
     public GameObject notaCanvas; // Asigna el objeto Canvas en Unity que contiene los mensajes.
     private Transform player;
     private bool isNoteActive = false;
+    private AudioClip agarrar;
     void Start()
     {
         // Busca el GameObject con la etiqueta "Player" y obtiene su transform.
@@ -48,6 +49,8 @@ public class NotaManagement : MonoBehaviour
         if (notaCanvas != null)
         {
             // Activa o desactiva el Canvas que contiene los mensajes.
+
+            AudioManager.Instance.EjecutarSonido(agarrar);
             notaCanvas.SetActive(!isNoteActive);
             isNoteActive = !isNoteActive;
             player.GetComponent<PlayerMovement>().enabled = false;
